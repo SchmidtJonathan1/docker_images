@@ -27,6 +27,9 @@ RUN apt-get update \
 # Update pip and install python dependencies
 RUN python3 -m pip install --no-cache-dir -U pip
 
+# Update pip and install python dependencies
+RUN python3 -m pip install --no-cache-dir ansible-core
+
 # Create user and group
 RUN useradd -rm -d /home/ansible -s /bin/bash -g root -G sudo -u 1000 ansible 
 

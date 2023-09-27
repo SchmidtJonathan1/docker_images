@@ -6,4 +6,5 @@ RUN mkdir -p /runner/{env,inventory,project,artifacts} /home/runner/.ansible/tmp
 RUN chmod -R 777 /runner /home/runner
 WORKDIR /runner
 ENV HOME=/home/runner
-CMD ["ansible-runner", "run", "/runner"]
+## Container stops after run with this command
+# CMD ["ansible-runner", "run", "/runner"]
